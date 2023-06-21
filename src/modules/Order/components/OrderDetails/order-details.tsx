@@ -18,7 +18,11 @@ function OrderDetails({
   return state.matches('fetching') || state.matches('idle') ? (
     <div>Loading...</div>
   ) : (
-    <div>{JSON.stringify(state.context?.orderDetails)}</div>
+    <div>
+      <p>order id: {state.context.orderDetails.id}</p>
+      <p>firstname: {state.context.orderDetails.first_name}</p>
+      <p>lastname: {state.context.orderDetails.last_name}</p>
+    </div>
   );
 }
 
