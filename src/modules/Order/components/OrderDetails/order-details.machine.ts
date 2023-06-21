@@ -65,10 +65,7 @@ export const orderDetailsMachine = createMachine(
     actions: {
       assignOrderDetails: assign({
         // @ts-ignore
-        orderDetails: (_, event) => {
-          console.log(event);
-          return event.data
-        }
+        orderDetails: (_, event) => event.data.data[0]
       })
     },
   }
